@@ -1,0 +1,20 @@
+{
+  "name": "document-comparison-ai-mcp",
+  "description": "MEOK AI Labs \u2014 Document Comparison tools for AI agents and LLMs",
+  "vendor": "MEOK AI Labs",
+  "homepage": "https://meok.ai",
+  "repository": "https://github.com/CSOAI-ORG/document-comparison-ai-mcp",
+  "runtime": "python",
+  "entrypoint": "server.py",
+  "tools": [
+    "compare_documents"
+  ],
+  "categories": [
+    "Document Processing",
+    "Utilities"
+  ],
+  "pricing": {
+    "free": "50 calls/day",
+    "pro": "$9/mo"
+  }
+}

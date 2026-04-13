@@ -1,0 +1,10 @@
+name: document-comparison-ai-mcp
+description: "MEOK AI Labs — Document Comparison tools for AI agents and LLMs"
+vendor: MEOK AI Labs
+homepage: https://meok.ai
+repository: https://github.com/CSOAI-ORG/document-comparison-ai-mcp
+license: MIT
+categories: [Document Processing, Utilities]
+tags: [document-comparison, text-comparison, diff-analysis, content-diff]
+runtime: python
+entrypoint: server.py
