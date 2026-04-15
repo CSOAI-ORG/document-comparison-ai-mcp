@@ -1,0 +1,72 @@
+{
+  "name": "document-comparison-ai",
+  "description": "Advanced document comparison with diff highlighting and version tracking.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/document-comparison-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "compare_documents",
+      "description": "Compare two documents and find differences"
+    },
+    {
+      "name": "compare_versions",
+      "description": "Compare two stored document versions"
+    },
+    {
+      "name": "store_document",
+      "description": "Store a document for future comparisons"
+    },
+    {
+      "name": "get_document",
+      "description": "Get a stored document"
+    },
+    {
+      "name": "list_versions",
+      "description": "List all versions of a document"
+    },
+    {
+      "name": "compute_similarity",
+      "description": "Compute similarity score between texts"
+    },
+    {
+      "name": "find_common_terms",
+      "description": "Find common and unique terms between documents"
+    },
+    {
+      "name": "get_comparison_history",
+      "description": "Get comparison history"
+    },
+    {
+      "name": "export_diff",
+      "description": "Export diff in specified format"
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}
