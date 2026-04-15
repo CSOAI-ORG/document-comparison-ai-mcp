@@ -1,13 +1,33 @@
-# Document Comparison Ai Mcp
+# Document Comparison AI MCP Server
 
-Document Comparison Ai Mcp — Compare documents and highlight differences.
+> By [MEOK AI Labs](https://meok.ai) — Advanced document comparison with diff highlighting and version tracking
 
-Built by [MEOK AI Labs](https://meok.ai).
+## Installation
+
+```bash
+pip install document-comparison-ai-mcp
+```
+
+## Usage
+
+```bash
+python server.py
+```
 
 ## Tools
 
-- `compare_documents`
+This server provides document comparison and version tracking including:
+
+- Side-by-side document comparison with token-level diff
+- Change highlighting (additions, deletions, modifications)
+- Similarity scoring between documents
+- Version history tracking
+- Document storage and retrieval
+
+## Authentication
+
+Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
 
 ## License
 
-MIT © MEOK AI Labs
+MIT — MEOK AI Labs
