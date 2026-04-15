@@ -1,5 +1,6 @@
 name: document-comparison-ai-mcp
-description: Advanced document comparison with diff highlighting and version tracking.
+description: AI-powered document comparison ai MCP server for agents. Supports compare
+  documents, compare versions, store document. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: compare_documents
