@@ -1,6 +1,6 @@
 {
   "name": "document-comparison-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Advanced document comparison with diff highlighting and version tracking.",
   "version": "1.0.0",
   "tools": [
     {
@@ -8,8 +8,18 @@
       "description": "Compare two documents and find differences",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "doc1": {
+            "type": "string"
+          },
+          "doc2": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "doc1",
+          "doc2"
+        ]
       }
     },
     {
@@ -17,8 +27,20 @@
       "description": "Compare two stored document versions",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "doc_id": {
+            "type": "string"
+          },
+          "version1": {
+            "type": "integer"
+          },
+          "version2": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "doc_id"
+        ]
       }
     },
     {
@@ -26,8 +48,21 @@
       "description": "Store a document for future comparisons",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "doc_id": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "doc_id",
+          "content"
+        ]
       }
     },
     {
@@ -35,8 +70,17 @@
       "description": "Get a stored document",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "doc_id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "doc_id"
+        ]
       }
     },
     {
@@ -44,8 +88,14 @@
       "description": "List all versions of a document",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "doc_id": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "doc_id"
+        ]
       }
     },
     {
@@ -53,8 +103,18 @@
       "description": "Compute similarity score between texts",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "text1": {
+            "type": "string"
+          },
+          "text2": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "text1",
+          "text2"
+        ]
       }
     },
     {
@@ -62,8 +122,18 @@
       "description": "Find common and unique terms between documents",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "doc1": {
+            "type": "string"
+          },
+          "doc2": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "doc1",
+          "doc2"
+        ]
       }
     },
     {
@@ -71,7 +141,14 @@
       "description": "Get comparison history",
       "parameters": {
         "type": "object",
-        "properties": {},
+        "properties": {
+          "doc_id": {
+            "type": "string"
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
         "required": []
       }
     },
@@ -80,8 +157,17 @@
       "description": "Export diff in specified format",
       "parameters": {
         "type": "object",
-        "properties": {},
-        "required": []
+        "properties": {
+          "comparison_id": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "comparison_id"
+        ]
       }
     }
   ]

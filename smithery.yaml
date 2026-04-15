@@ -1,31 +1,88 @@
 name: document-comparison-ai-mcp
-description: MEOK AI Labs MCP Server
+description: Advanced document comparison with diff highlighting and version tracking.
 version: 1.0.0
 tools:
 - name: compare_documents
   description: Compare two documents and find differences
-  parameters: []
+  parameters:
+  - name: doc1
+    type: string
+    required: true
+  - name: doc2
+    type: string
+    required: true
 - name: compare_versions
   description: Compare two stored document versions
-  parameters: []
+  parameters:
+  - name: doc_id
+    type: string
+    required: true
+  - name: version1
+    type: integer
+    required: false
+  - name: version2
+    type: integer
+    required: false
 - name: store_document
   description: Store a document for future comparisons
-  parameters: []
+  parameters:
+  - name: doc_id
+    type: string
+    required: true
+  - name: content
+    type: string
+    required: true
+  - name: metadata
+    type: object
+    required: false
 - name: get_document
   description: Get a stored document
-  parameters: []
+  parameters:
+  - name: doc_id
+    type: string
+    required: true
+  - name: version
+    type: integer
+    required: false
 - name: list_versions
   description: List all versions of a document
-  parameters: []
+  parameters:
+  - name: doc_id
+    type: string
+    required: true
 - name: compute_similarity
   description: Compute similarity score between texts
-  parameters: []
+  parameters:
+  - name: text1
+    type: string
+    required: true
+  - name: text2
+    type: string
+    required: true
 - name: find_common_terms
   description: Find common and unique terms between documents
-  parameters: []
+  parameters:
+  - name: doc1
+    type: string
+    required: true
+  - name: doc2
+    type: string
+    required: true
 - name: get_comparison_history
   description: Get comparison history
-  parameters: []
+  parameters:
+  - name: doc_id
+    type: string
+    required: false
+  - name: limit
+    type: integer
+    required: false
 - name: export_diff
   description: Export diff in specified format
-  parameters: []
+  parameters:
+  - name: comparison_id
+    type: string
+    required: true
+  - name: format
+    type: string
+    required: false
