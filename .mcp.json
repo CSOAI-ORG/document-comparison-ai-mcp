@@ -1,6 +1,88 @@
 {
   "name": "document-comparison-ai-mcp",
-  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Sovereign AI tools for everyone.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 MEOK AI Labs MCP Server",
   "version": "1.0.0",
-  "tools": []
+  "tools": [
+    {
+      "name": "compare_documents",
+      "description": "Compare two documents and find differences",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "compare_versions",
+      "description": "Compare two stored document versions",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "store_document",
+      "description": "Store a document for future comparisons",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "get_document",
+      "description": "Get a stored document",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "list_versions",
+      "description": "List all versions of a document",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "compute_similarity",
+      "description": "Compute similarity score between texts",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "find_common_terms",
+      "description": "Find common and unique terms between documents",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "get_comparison_history",
+      "description": "Get comparison history",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    {
+      "name": "export_diff",
+      "description": "Export diff in specified format",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  ]
 }
