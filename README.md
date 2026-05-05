@@ -1,33 +1,38 @@
-# Document Comparison AI MCP Server
+<div align="center">
 
-> By [MEOK AI Labs](https://meok.ai) — Advanced document comparison with diff highlighting and version tracking
+[![GitHub stars](https://img.shields.io/github/stars/CSOAI-ORG/document-comparison-ai-mcp)](https://github.com/CSOAI-ORG/document-comparison-ai-mcp/stargazers)
+
+# udocumentU comparisonU aiU mcp
+
+****
+
+[![npm version](https://img.shields.io/npm/v/@meok-ai/document-comparison-ai-mcp)](https://www.npmjs.com/package/@meok-ai/document-comparison-ai-mcp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK_AI_Labs-255+_servers-purple)](https://meok.ai)
+
+[Installation](#installation) · [Docs](https://csoai.org) · [Report Bug](https://github.com/CSOAI-ORG/document-comparison-ai-mcp/issues)
+
+</div>
+
+---
 
 ## Installation
 
 ```bash
 pip install document-comparison-ai-mcp
+# or
+npm install -g @meok-ai/document-comparison-ai-mcp
 ```
 
-## Usage
+## Quick Start
 
-```bash
-python server.py
-```
+See the project repository for full documentation and examples.
 
-## Tools
+## Enterprise Support
 
-This server provides document comparison and version tracking including:
-
-- Side-by-side document comparison with token-level diff
-- Change highlighting (additions, deletions, modifications)
-- Similarity scoring between documents
-- Version history tracking
-- Document storage and retrieval
-
-## Authentication
-
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+- 📧 nicholas@csoai.org
+- 🌐 [CSOAI.org](https://csoai.org)
 
 ## License
 
-MIT — MEOK AI Labs
+MIT © [CSOAI](https://csoai.org)
