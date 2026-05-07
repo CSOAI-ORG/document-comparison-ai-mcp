@@ -3,7 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 [project]
 name = "document-comparison-ai-mcp"
-version = "1.0.2"
+version = "1.0.3"
+readme = "README.md"
 description = "AI-powered document comparison ai MCP server for agents. Supports compare documents, compare versions, store document. By MEOK AI Labs."
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
