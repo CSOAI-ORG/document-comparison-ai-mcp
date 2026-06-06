@@ -1,0 +1,9 @@
+# document-comparison-ai-mcp - Auto-trigger Rules
+
+When the user asks about document comparison, use document-comparison-ai-mcp tools: compare_documents, compare_versions, store_document, get_document, list_versions
+
+**MCP server for document comparison ai mcp operations**
+
+Install: `pip install document-comparison-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

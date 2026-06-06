@@ -1,0 +1,48 @@
+# document-comparison-ai-mcp
+# **MCP server for document comparison ai mcp operations**
+
+## Install
+```bash
+pip install document-comparison-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `compare_documents`
+Compare two documents and find differences
+
+### `compare_versions`
+Compare two stored document versions
+
+### `store_document`
+Store a document for future comparisons
+
+### `get_document`
+Get a stored document
+
+### `list_versions`
+List all versions of a document
+
+### `compute_similarity`
+Compute similarity score between texts
+
+### `find_common_terms`
+Find common and unique terms between documents
+
+### `get_comparison_history`
+Get comparison history
+
+### `export_diff`
+Export diff in specified format
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

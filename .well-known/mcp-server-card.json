@@ -1,0 +1,40 @@
+{
+  "name": "document-comparison-ai-mcp",
+  "title": "Document Comparison Ai Mcp",
+  "description": "AI-powered document comparison ai MCP server for agents. Supports compare documents, compare versions, store document. By MEOK AI Labs.",
+  "version": "1.0.6",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "compare_documents"
+    },
+    {
+      "name": "compare_versions"
+    },
+    {
+      "name": "store_document"
+    },
+    {
+      "name": "get_document"
+    },
+    {
+      "name": "list_versions"
+    },
+    {
+      "name": "compute_similarity"
+    },
+    {
+      "name": "find_common_terms"
+    },
+    {
+      "name": "get_comparison_history"
+    },
+    {
+      "name": "export_diff"
+    }
+  ]
+}

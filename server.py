@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""MEOK AI Labs — document-comparison-ai-mcp MCP Server. Advanced document comparison with diff highlighting and version tracking."""
+"""
+MEOK AI Labs — document-comparison-ai-mcp MCP Server. Advanced document comparison with diff highlighting and version tracking."""
 
 import json
 import re
@@ -8,7 +9,6 @@ from typing import Any, List, Set
 import uuid
 import sys, os
 
-sys.path.insert(0, os.path.expanduser("~/clawd/meok-labs-engine/shared"))
 from auth_middleware import check_access
 from mcp.server.fastmcp import FastMCP
 from collections import defaultdict
@@ -116,7 +116,7 @@ def compare_documents(doc1: str, doc2: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     result = compute_diff(doc1, doc2)
@@ -186,7 +186,7 @@ def compare_versions(doc_id: str, version1: int = 1, version2: int = 2, api_key:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if doc_id not in _store["documents"]:
@@ -250,7 +250,7 @@ def store_document(doc_id: str, content: str, metadata: dict = None, api_key: st
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if doc_id not in _store["documents"]:
@@ -324,7 +324,7 @@ def get_document(doc_id: str, version: int = 0, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if doc_id not in _store["documents"]:
@@ -393,7 +393,7 @@ def list_versions(doc_id: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     if doc_id not in _store["documents"]:
@@ -457,7 +457,7 @@ def compute_similarity(text1: str, text2: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     result = compute_diff(text1, text2)
@@ -517,7 +517,7 @@ def find_common_terms(doc1: str, doc2: str, api_key: str = "") -> str:
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     tokens1 = set(tokenize(doc1))
@@ -582,7 +582,7 @@ def get_comparison_history(doc_id: str = "", limit: int = 10, api_key: str = "")
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     comparisons = _store["comparisons"][-limit:]
@@ -635,7 +635,7 @@ def export_diff(comparison_id: str, format: str = "json", api_key: str = "") -> 
     """
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if err := _rl(): return err
 
     comparison = next(
@@ -668,5 +668,8 @@ def export_diff(comparison_id: str, format: str = "json", api_key: str = "") -> 
     return json.dumps({"error": "Unknown format"})
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()
