@@ -1,0 +1,104 @@
+{
+  "name": "document-comparison-ai-mcp",
+  "description": "Document Comparison Ai MCP Server by MEOK AI Labs",
+  "url": "https://proofof.ai/scorecard/document-comparison-ai-mcp.html",
+  "version": "1.0.6",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "compare_documents",
+      "name": "Compare Documents",
+      "description": "compare_documents via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compare_versions",
+      "name": "Compare Versions",
+      "description": "compare_versions via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "store_document",
+      "name": "Store Document",
+      "description": "store_document via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_document",
+      "name": "Get Document",
+      "description": "get_document via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_versions",
+      "name": "List Versions",
+      "description": "list_versions via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "compute_similarity",
+      "name": "Compute Similarity",
+      "description": "compute_similarity via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "find_common_terms",
+      "name": "Find Common Terms",
+      "description": "find_common_terms via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "get_comparison_history",
+      "name": "Get Comparison History",
+      "description": "get_comparison_history via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "export_diff",
+      "name": "Export Diff",
+      "description": "export_diff via document-comparison-ai-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}

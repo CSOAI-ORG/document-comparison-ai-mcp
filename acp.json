@@ -1,0 +1,27 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "document-comparison-ai-mcp",
+    "description": "Document Comparison Ai MCP Server by MEOK AI Labs",
+    "version": "1.0.6",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "document-comparison-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "compare_documents",
+      "compare_versions",
+      "store_document",
+      "get_document",
+      "list_versions",
+      "compute_similarity",
+      "find_common_terms",
+      "get_comparison_history",
+      "export_diff"
+    ]
+  }
+}
