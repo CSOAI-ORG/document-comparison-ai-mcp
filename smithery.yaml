@@ -1,89 +1,37 @@
-name: document-comparison-ai-mcp
-description: AI-powered document comparison ai MCP server for agents. Supports compare
-  documents, compare versions, store document. By MEOK AI Labs.
-version: 1.0.0
-tools:
-- name: compare_documents
-  description: Compare two documents and find differences
-  parameters:
-  - name: doc1
-    type: string
-    required: true
-  - name: doc2
-    type: string
-    required: true
-- name: compare_versions
-  description: Compare two stored document versions
-  parameters:
-  - name: doc_id
-    type: string
-    required: true
-  - name: version1
-    type: integer
-    required: false
-  - name: version2
-    type: integer
-    required: false
-- name: store_document
-  description: Store a document for future comparisons
-  parameters:
-  - name: doc_id
-    type: string
-    required: true
-  - name: content
-    type: string
-    required: true
-  - name: metadata
+# smithery.yaml — Smithery (https://smithery.ai) submission payload
+# Repo: CSOAI-ORG/document-comparison-ai-mcp
+# Generated: 2026-06-09
+# Transport: stdio (PyPI package, installed via uvx)
+# See: DISTRIBUTION_GAPS_2026-06-08.md for the channel strategy
+startCommand:
+  type: stdio
+  timeout: 120000
+  pingInterval: 5000
+  pingTimeout: 30000
+  configSchema:
     type: object
-    required: false
-- name: get_document
-  description: Get a stored document
-  parameters:
-  - name: doc_id
-    type: string
-    required: true
-  - name: version
-    type: integer
-    required: false
-- name: list_versions
-  description: List all versions of a document
-  parameters:
-  - name: doc_id
-    type: string
-    required: true
-- name: compute_similarity
-  description: Compute similarity score between texts
-  parameters:
-  - name: text1
-    type: string
-    required: true
-  - name: text2
-    type: string
-    required: true
-- name: find_common_terms
-  description: Find common and unique terms between documents
-  parameters:
-  - name: doc1
-    type: string
-    required: true
-  - name: doc2
-    type: string
-    required: true
-- name: get_comparison_history
-  description: Get comparison history
-  parameters:
-  - name: doc_id
-    type: string
-    required: false
-  - name: limit
-    type: integer
-    required: false
-- name: export_diff
-  description: Export diff in specified format
-  parameters:
-  - name: comparison_id
-    type: string
-    required: true
-  - name: format
-    type: string
-    required: false
+    required: []
+    properties:
+      apiKey:
+        type: string
+        description: "MEOK API key (optional; required for x402 paywalled tools)"
+        default: ""
+      x402PayTo:
+        type: string
+        description: "USDC address for x402 micropayments (default: meok.ai wallet)"
+        default: ""
+      logLevel:
+        type: string
+        description: "Log level (debug, info, warn, error)"
+        default: "info"
+    additionalProperties: false
+  commandFunction: |-
+    (config) => ({
+      command: 'uvx',
+      args: ['document_comparison_ai'],
+      env: {
+        MEOK_API_KEY: config.apiKey || '',
+        X402_PAY_TO: config.x402PayTo || '',
+        MEOK_LOG_LEVEL: config.logLevel || 'info',
+      }
+    })
